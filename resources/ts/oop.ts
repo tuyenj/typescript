@@ -1,5 +1,4 @@
 // class
-
 class Task {
     id: number;
     name: string;
@@ -28,17 +27,20 @@ interface TaskInterface {
 
 class TaskService {
     tasks: TaskInterface[];
-    constructor(tasks: TaskInterface[]){
+
+    constructor(tasks: TaskInterface[]) {
         this.tasks = tasks;
     }
 
-    getItems(){
+    getItems() {
         return this.tasks;
     }
 }
-let tasks:TaskInterface[] =[
-    {id:1, name:"Coding"},
-    {id:2, name:"Study"}
+
+let tasks: TaskInterface[] = [
+    {id: 1, name: "Coding"},
+    {id: 2, name: "Study"}
 ];
+
 let taskServiceObj = new TaskService(tasks);
 console.log(taskServiceObj.getItems());

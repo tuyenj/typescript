@@ -62,6 +62,7 @@ function userInfo2(name: string, age?: number): string {
         return `My name is ${name} and age is ${age}`;
     }
 }
+
 console.log(userInfo2("John"));
 
 // total length
@@ -70,25 +71,29 @@ function totalLength(): number {
 }
 
 // Rest parameter
-function showInfo( name:string, ...course:string[]): string {
+function showInfo(name: string, ...course: string[]): string {
     return `${name} study ${course.join(", ")}`;
 }
-console.log(showInfo("David","Java","PHP","C++"));
+
+console.log(showInfo("David", "Java", "PHP", "C++"));
 
 // function arrow
 let f1 = function (i: number): number {
-    return i*i;
+    return i * i;
 }
 console.log(f1(2));
 
-let f3 =(i:number) => {return i*i};
+let f3 = (i: number) => {
+    return i * i
+};
 console.log(f3(4));
 
 /**
  * overload
  */
-function funcABC(x:string): number {
+function funcABC(x: string): number {
     return 100;
 }
+
 funcABC("TestABC")
 

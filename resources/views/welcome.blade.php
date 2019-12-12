@@ -96,6 +96,6 @@
                 </div>
             </div>
         </div>
-        <script src="js/interface.js"></script>
+        <script src="js/generic.js"></script>
     </body>
 </html>
