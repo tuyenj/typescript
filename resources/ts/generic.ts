@@ -12,7 +12,7 @@ StudyGeneric.printArray<string>(["number 1", "number 2", "number 3"]);
 StudyGeneric.printArray<any>([1, 2, 3, "String ok"]);
 
 // Generic for class
-class Product<A, B, C> {
+class Product1<A, B, C> {
     id: A;
     name: B;
     price: C;
@@ -28,8 +28,8 @@ class Product<A, B, C> {
     }
 }
 
-let product = new Product<string, string, number>("001", "Car", 100000);
+let product = new Product1<string, string, number>("001", "Car", 100000);
 product.showProductDetail();
 
-let product2 = new Product<number, string, number>(99, "Toyota", 2333);
+let product2 = new Product1<number, string, number>(99, "Toyota", 2333);
 product2.showProductDetail();

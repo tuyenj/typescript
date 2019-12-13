@@ -1,101 +1,65 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+    <title>TypeScript Study</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="{{asset('frontend/vendor/font-awesome.css')}}">
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{asset('frontend/vendor/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/style.css')}}">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1 class="page-title">Shopping Cart <small></small></h1>
+        </div>
+    </div>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="card card-block">
+                <h5 class="card-title">List Products</h5>
+                <div class="card-body" id="list-product">
+                    test
                 </div>
             </div>
         </div>
-        <script src="js/generic.js"></script>
-    </body>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="card card-block">
+                <div class="card-header"><h1 class="card-title">Your Cart</h1></div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th width="4%">#</th>
+                            <th>Pokemon</th>
+                            <th width="15%">Price</th>
+                            <th width="4%">Quantity</th>
+                            <th width="20%">Subtotal</th>
+                            <th width="25%">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody id="my-cart-body">
+                        <!-- CART BODY -->
+                        </tbody>
+                        <tfoot id="my-cart-footer">
+                        <!-- CART FOOTER -->
+                        </tfoot>
+                    </table>
+
+                </div>
+            </div>
+            <div class="alert alert-success" role="alert" id="mnotification">Updated</div>
+        </div>
+    </div>
+</div>
+<script src="{{asset('frontend/vendor/bootstrap.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/shopping.js')}}"></script>
+</body>
 </html>

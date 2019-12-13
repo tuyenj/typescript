@@ -86,52 +86,74 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/ts/generic.ts":
+/***/ "./resources/ts/product.ts":
 /*!*********************************!*\
-  !*** ./resources/ts/generic.ts ***!
+  !*** ./resources/ts/product.ts ***!
   \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: Product */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-console.log("Generic");
-// Generic for method
-class StudyGeneric {
-    static printArray(params) {
-        console.log(params);
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Product", function() { return Product; });
+class Product {
+    constructor(id, name, price, summary, canBuy = true, image) {
+        this._id = id;
+        this._name = name;
+        this._price = price;
+        this._summary = summary;
+        this._canBuy = canBuy;
+        this._image = image;
+    }
+    get id() {
+        return this._id;
+    }
+    set id(value) {
+        this._id = value;
+    }
+    get name() {
+        return this._name;
+    }
+    set name(value) {
+        this._name = value;
+    }
+    get price() {
+        return this._price;
+    }
+    set price(value) {
+        this._price = value;
+    }
+    get summary() {
+        return this._summary;
+    }
+    set summary(value) {
+        this._summary = value;
+    }
+    get canBuy() {
+        return this._canBuy;
+    }
+    set canBuy(value) {
+        this._canBuy = value;
+    }
+    get image() {
+        return this._image;
+    }
+    set image(value) {
+        this._image = value;
     }
 }
-StudyGeneric.printArray([1, 2, 3, 4]);
-StudyGeneric.printArray(["number 1", "number 2", "number 3"]);
-StudyGeneric.printArray([1, 2, 3, "String ok"]);
-// Generic for class
-class Product1 {
-    constructor(id, name, price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-    }
-    showProductDetail() {
-        console.log(`Product detail :\nID: ${this.id}\nName: ${this.name}\nPrice: ${this.price}`);
-    }
-}
-let product = new Product1("001", "Car", 100000);
-product.showProductDetail();
-let product2 = new Product1(99, "Toyota", 2333);
-product2.showProductDetail();
 
 
 /***/ }),
 
 /***/ 1:
 /*!***************************************!*\
-  !*** multi ./resources/ts/generic.ts ***!
+  !*** multi ./resources/ts/product.ts ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\laraveltypescript\resources\ts\generic.ts */"./resources/ts/generic.ts");
+module.exports = __webpack_require__(/*! C:\laragon\www\laraveltypescript\resources\ts\product.ts */"./resources/ts/product.ts");
 
 
 /***/ })

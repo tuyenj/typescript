@@ -81,57 +81,45 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/ts/generic.ts":
-/*!*********************************!*\
-  !*** ./resources/ts/generic.ts ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./resources/ts/cart-item.ts":
+/*!***********************************!*\
+  !*** ./resources/ts/cart-item.ts ***!
+  \***********************************/
+/*! exports provided: CartItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-console.log("Generic");
-// Generic for method
-class StudyGeneric {
-    static printArray(params) {
-        console.log(params);
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartItem", function() { return CartItem; });
+class CartItem {
+    constructor(product, quantity = 1) {
+        this.product = product;
+        this.quantiy = quantity;
+    }
+    showCartItemInHTML() {
+        return "HTML";
+    }
+    getSubtotal() {
+        return 10;
     }
 }
-StudyGeneric.printArray([1, 2, 3, 4]);
-StudyGeneric.printArray(["number 1", "number 2", "number 3"]);
-StudyGeneric.printArray([1, 2, 3, "String ok"]);
-// Generic for class
-class Product1 {
-    constructor(id, name, price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-    }
-    showProductDetail() {
-        console.log(`Product detail :\nID: ${this.id}\nName: ${this.name}\nPrice: ${this.price}`);
-    }
-}
-let product = new Product1("001", "Car", 100000);
-product.showProductDetail();
-let product2 = new Product1(99, "Toyota", 2333);
-product2.showProductDetail();
 
 
 /***/ }),
 
-/***/ 1:
-/*!***************************************!*\
-  !*** multi ./resources/ts/generic.ts ***!
-  \***************************************/
+/***/ 3:
+/*!*****************************************!*\
+  !*** multi ./resources/ts/cart-item.ts ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\laraveltypescript\resources\ts\generic.ts */"./resources/ts/generic.ts");
+module.exports = __webpack_require__(/*! C:\laragon\www\laraveltypescript\resources\ts\cart-item.ts */"./resources/ts/cart-item.ts");
 
 
 /***/ })
